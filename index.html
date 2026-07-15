@@ -505,14 +505,15 @@
   // Cada sabor usa su propia imagen: image1.png, image2.png... en el mismo
   // directorio que este archivo HTML (respetando el orden de la lista).
   const FLAVORS = [
-    { name:'Cuatro Quesos', desc:'Muzzarella, parmesano, gruyère y patagrás', tag:'Clásico', img:'image1.png' },
-    { name:'Cordero a las brasas', desc:'Cordero, morrón, cebolla y ajo, con masa de albahaca', tag:'Patagónico', img:'image2.png' },
-    { name:'Salmón rosado & puerro', desc:'Salsa blanca con puerro, sobre masa de tinta de calamar', tag:'De mar', img:'image3.png' },
-    { name:'Brócoli, roquefort & ricota', desc:'Sobre masa de remolacha', tag:'Vegetariano', img:'image4.png' },
-    { name:'Pollo al curry', desc:'Pollo, champiñones y cebolla, con masa de perejil', tag:'Especiado', img:'image5.png' },
-    { name:'Calabaza, nuez & ahumado', desc:'Queso ahumado, sobre masa de cúrcuma', tag:'Otoñal', img:'image6.png' },
-    { name:'Panzotti Dubai', desc:'Pistacho, mortadela, ricota y parmesano', tag:'De autor', img:'image7.png' },
-    { name:'Osobuco a la cerveza', desc:'Cerveza negra y cebolla caramelizada', tag:'De autor', img:'image8.png' },
+    { name:'Cuatro Quesos', desc:'Muzzarella, parmesano, gruyère y patagrás', tag:'Clásico', img:'cuatroquesos.png' },
+    { name:'Salmón rosado & salsa blanca', desc:'Salmón rosado con salsa blanca', tag:'De mar', img:'salmonrosado.png' },
+    { name:'Róbalo ahumado & puré de col', desc:'Róbalo ahumado con puré de col', tag:'De mar', img:'robaloahumado.png' },
+    { name:'Picaña braseada & provoleta', desc:'Picaña braseada con corazón de provoleta', tag:'De autor', img:'picanabraseada.png' },
+    { name:'Pollo al curry', desc:'Pollo al curry, champiñones y cebolla', tag:'Especiado', img:'pollocurry.png' },
+    { name:'Champiñones, panceta & mozzarella', desc:'Champiñones, panceta, mozzarella y cebolla', tag:'Clásico', img:'champinones.png' },
+    { name:'Calabaza, nuez & ahumado', desc:'Calabaza, nuez y queso ahumado', tag:'Otoñal', img:'calabazanuez.png' },
+    { name:'Brócoli, roquefort & ricota', desc:'Brócoli, roquefort y ricota', tag:'Vegetariano', img:'brocoliroquefort.png' },
+    { name:'Tomate seco, mozzarella & ricota', desc:'Tomate seco, mozzarella y ricota', tag:'Vegetariano', img:'tomateseco.png' },
   ];
 
   const grid = document.getElementById('flavor-grid');
@@ -521,7 +522,7 @@
     card.className = 'flavor-card';
     card.innerHTML = `
       <div class="pasta-visual">
-        <img src="image1.png" alt="Cuatro Quesos" style="width: 200px; height: auto; display: block;">
+        <img src="${f.img}" alt="${f.name}" style="width: 200px; height: auto; display: block;">
       </div>
       <span class="flavor-tag">${f.tag}</span>
       <h3>${f.name}</h3>
